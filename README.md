@@ -96,7 +96,7 @@ When a token is composed of multiple characters, you'll generally know it's "don
 
 When this happens, you'll want to put the unused character back on the input stream so it can be reconsidered as the beginning of the following token. Check out the manual entry for `ungetc`.
 
-The following is a successful sample run for the provided `input.txt`:
+The following is a successful sample run for the provided [`input.txt`](./lab_4_scanner/input.txt):
 
 ```
 <IDENT, firstvar>
