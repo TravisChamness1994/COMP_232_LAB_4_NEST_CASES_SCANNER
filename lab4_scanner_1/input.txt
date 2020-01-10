@@ -1,0 +1,11 @@
+firstvar = 123;
+
+secondVar = 21.;
+
+var3 = 1.5;
+
+repeat (10)
+    var3 = 2 * (firstvar + secondvar) / (firstvar + 2);
+
+repeat (firstvar + 2 * secondvar)
+    print firstvar;
