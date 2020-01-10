@@ -76,8 +76,6 @@ TOKEN *scanner()
          * if applicable).
          */
 
-
-
         // if the buffer is full, double its size
         if (stringValueIndex >= bufferSize-1)
         {
