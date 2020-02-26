@@ -33,7 +33,7 @@ bool updateKeywordOrId(TOKEN *token, char *str)
      *
      * If the token is not a keyword, change its type to the token type
      * for identifiers, allocate space for its string value and copy the
-     * string value into the token.
+     * string value into the token, then return false.
      */
 }
 
