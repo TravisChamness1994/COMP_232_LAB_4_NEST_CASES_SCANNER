@@ -41,12 +41,16 @@ void printToken (TOKEN **token)
 {
     /*
      * TODO
+     * EX: <IDENT, firstvar>
+     * EX: <INT, 123>
+     * EX: <SEMICOLON>
+     * Looks like a switch statement may be needed for the printToken Method
      * Print the referenced token in a readable format.
      * Displayed information should include the TOKEN_TYPE,
      * and also the token's value if applicable.
      */
 }
-
+//MAKE SURE TO HAVE ALL BREAK STATEMENTS TO CLOSE A SWITCH STATEMENT
 TOKEN *scanner()
 {
     // buffer to store a token's contained characters while it is being tokenized

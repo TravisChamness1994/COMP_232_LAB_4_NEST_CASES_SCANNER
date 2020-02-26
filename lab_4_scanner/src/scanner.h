@@ -8,34 +8,34 @@
 
 typedef enum
 {
-    NO_TOKEN_TYPE,
-    INVALID_TOKEN,
-    REPEAT_TOKEN,
-    PRINT_TOKEN,
-    IDENT_TOKEN,
-    INT_TOKEN,
-    FLOAT_TOKEN,
-    ASSIGNMENT_TOKEN,
-    LPAREN_TOKEN,
-    RPAREN_TOKEN,
-    ADD_OP_TOKEN,
-    MULT_OP_TOKEN,
-    SEMICOLON_TOKEN,
-    EOF_TOKEN
+    NO_TOKEN_TYPE, //when whitespace, tab, \n
+    INVALID_TOKEN, // A token representing characters not in our language
+    REPEAT_TOKEN, // A token that is the same as the previous
+    PRINT_TOKEN, // Print token Keyword
+    IDENT_TOKEN, // Identifiers token
+    INT_TOKEN, // Integer token
+    FLOAT_TOKEN, // Float token
+    ASSIGNMENT_TOKEN, //Assignment token
+    LPAREN_TOKEN, // Left parenthesis token
+    RPAREN_TOKEN, // Right parenthesis token
+    ADD_OP_TOKEN, // Add operator token (+|-)
+    MULT_OP_TOKEN, // Multiplication token (*|/|%0)
+    SEMICOLON_TOKEN, // Semicolon token
+    EOF_TOKEN //End Of File token
 } TOKEN_TYPE;
 
 typedef union
 {
-    long integer;
-    double floating_point;
-    char *string;
-    char op;
+    long integer; // Token_Value for Integer
+    double floating_point; // Token_Value for floating point numbers
+    char *string; // Token_value for strings
+    char op; //Token_value of AddOps or MultOps
 } TOKEN_VALUE;
 
 typedef struct token
 {
-    TOKEN_TYPE type;
-    TOKEN_VALUE val;
+    TOKEN_TYPE type; //Token member Type
+    TOKEN_VALUE val; //Token member Value
 } TOKEN;
 
 typedef enum
@@ -44,7 +44,7 @@ typedef enum
     ID_OR_KEYWORD_STATE,
     INT_STATE,
     FLOAT_STATE
-} STATE;
+} STATE; // States are where we are in the scanning
 
 TOKEN *scanner();
 
